@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 id="header">.: ĐĂNG KÝ NGƯỜI DÙNG :.</h1>
+        <hr>
+        <form action="form_action.php" method="post">
+            <label for="nameaccount">Tên hung dz:</label> <input type="text" name="fnameaccount" value="">*<br>
+            <label for="password">Mật khẩu: Hung dz</label><input type="password" name="fpassword" value="">*<br>
+            (Tối thiểu 5 kí tự)<br>
+            <label for="passagain">Gõ lại mật khẩu:</label> <input type="passwordagain" name="fpasswordagain" value="">*<br>
+        </form>
+        <hr>
+        <h2>::Nhập thông tin để lấy lại mật khẩu khi quên</h2>
+        <form action="form_action.php" method="post">
+            <label for="ask">Câu hỏi bí mật:</label>
+            <select name="scauhoibimat">
+                <option value="ba">Ba bạn tên gì</option>
+                <option value="me">Mẹ bạn tên gì</option>
+            </select><br>
+            <label for="answer">Trả lời:</label> <input type="text" name="fanswer" value=""><br>
+        </form>
+        <hr>
+        <h2>::Thông tin cá nhân</h2>
+        <form action="form_action.php" method="post">
+            <label for="lastname">Họ và chữ lót:</label> <input type="text" name="lastname" value=""><br>
+            <label for="name">Tên:</label> <input type="text" name="fname" value=""><br>
+            <label for="ngaysinh">Ngày sinh: </label>
+            <select name="smonth">
+                <option value="mot">1</option>
+                <option value="hai">2</option>
+                <option value="khac">...</option>
+                <option value="muoihait">12</option>
+            </select>
+            .<input type="text" name="fday" value="">
+            .<input type="text" name="fyear" value="">
+            <a>(Month.DD.YYYY)</a>,<br>
+            <label for="sex">Giới tính:</label> 
+            <input type="radio" name="sex" value="male" checked=true/>Male
+            <input type="radio" name="sex" value="female"/>Female<br>
+            <label for="job">Nghề nghiệp liên quan:</label>
+            <select name="sjob">
+                <option value="kisu">Kĩ sư</option>
+                <option value="giaovien">Giáo viên</option>
+                <option value="sinhvien">Sinh Viên</option>
+                <option value="khac">khác</option>
+            </select>
+        </form>
+        <hr>
+        <h2>::Sở thích (tùy chọn)</h2>
+        <form action="form_action.php" method="post" id="favorite">
+            <input type="radio" name="favorite" value="amnhac"/>Âm nhạc
+            <input type="radio" name="favorite" value="dulich"/>Du lịch<br>
+            <input type="radio" name="favorite" value="nghiencuu"/>Nghiên cứu
+            <input type="radio" name="favorite" value="kinhdoanh"/>Kinh doanh<br>
+        </form>
+        <hr>
+        <form action="form_action.php" method="post">
+            <input type="submit" value="Đăng kí"/>
+            <input type="submit" value="Xoá"/>
+        </form>
+    </body>
+</html>
